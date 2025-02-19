@@ -5,63 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculádora</title>
+    <title>Calculadora</title>
 </head>
 
 <body>
     <div id="corpo">
         <h1>Calculadora</h1>
-            <input type="text" name="res" id="res" style="width: 396px; height: 70px;
-            background-color: #fffdfd04; border: none; outline: none;" readonly/>
+        <input type="text" id="display" style="width: 396px; height: 70px; background-color: #fffdfd04; color: #fff; border: none; outline: none;  font-size: 30px;" readonly/>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">
-                <input type="button" value="C" style="width: 80px; height: 80px; background-color: #ff0000; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="limpar()"/>
-                <input type="button" value="%" style="width: 80px; height: 80px; background-color: #ffffff78; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="porcentagem()"/> 
-                <input type="button" value="+/-" style="width: 80px; height: 80px; background-color: #ffffff78;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('-')"/>
-                <input type="button" value="÷" style="width: 80px; height: 80px; background-color: #ff8c00;
-                color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;" onclick="inserir('/')"/> 
+            <input type="button" value="C" style="width: 80px; height: 80px; background-color: #ff0000; color:
+             #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="%" style="width: 80px; height: 80px; background-color: #ffffff78;
+            color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="+/-" style="width: 80px; height: 80px; background-color: #ffffff78;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="÷" style="width: 80px; height: 80px; background-color: #ff8c00; 
+            color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;"/> 
         </div>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">     
-                <input type="button" value="7" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="limpar()"/>
-                <input type="button" value="8" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="porcentagem()"/> 
-                <input type="button" value="9" style="width: 80px; height: 80px; background-color: #ffffff30;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('-')"/>
-                <input type="button" value="x" style="width: 80px; height: 80px; background-color: #ff8c00;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('/')"/>
-        </div>         
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">     
-                <input type="button" value="4" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="limpar()"/>
-                <input type="button" value="5" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="porcentagem()"/> 
-                <input type="button" value="6" style="width: 80px; height: 80px; background-color: #ffffff30;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('-')"/>
-                <input type="button" value="-" style="width: 80px; height: 80px; background-color: #ff8c00;
-                color: #fff; font-size: 35px; border: none; border-radius: 80px; outline: none;" onclick="inserir('/')"/>
-        </div>         
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">     
-                <input type="button" value="3" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="limpar()"/>
-                <input type="button" value="2" style="width: 80px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="porcentagem()"/> 
-                <input type="button" value="1" style="width: 80px; height: 80px; background-color: #ffffff30;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('-')"/>
-                <input type="button" value="÷" style="width: 80px; height: 80px; background-color: #ff8c00;
-                color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;" onclick="inserir('/')"/>
-        </div>         
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">     
-                <input type="button" value="0" style="width: 180px; height: 80px; background-color: #ffffff30; 
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="porcentagem()"/> 
-                <input type="button" value="," style="width: 80px; height: 80px; background-color: #ffffff30;
-                color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;" onclick="inserir('-')"/>
-                <input type="button" value="=" style="width: 80px; height: 80px; background-color: #ff8c00;
-                color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;" onclick="inserir('/')"/>
-        </div>         
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">
+            <input type="button" value="7" style="width: 80px; height: 80px; background-color: #ffffff30; 
+            color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="8" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="9" style="width: 80px; height: 80px; background-color: #ffffff30; 
+            color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="x" style="width: 80px; height: 80px; background-color: #ff8c00;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">
+            <input type="button" value="4" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="5" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="6" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="-" style="width: 80px; height: 80px; background-color: #ff8c00;
+             color: #fff; font-size: 35px; border: none; border-radius: 80px; outline: none;"/>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">
+            <input type="button" value="1" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="2" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="3" style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="+" style="width: 80px; height: 80px; background-color: #ff8c00; 
+            color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;"/>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 10px;">
+            <input type="button" value="0" style="width: 180px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="." style="width: 80px; height: 80px; background-color: #ffffff30;
+             color: #fff; font-size: 30px; border: none; border-radius: 80px; outline: none;"/>
+            <input type="button" value="=" id="equals" style="width: 80px; height: 80px; background-color:
+             #ff8c00; color: #fff; font-size: 25px; border: none; border-radius: 80px; outline: none;"/>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
-        <script src="script.js"></script>
+
 </html>
