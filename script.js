@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (value === '+/-') {
                 display.value = display.value.charAt(0) === '-' ? display.value.slice(1) : '-' + display.value;
             } else if (value === '%') {
-                display.value = (parseFloat(display.value) / 100).toString();
+                display.value = (eval(display.value) / 100).toString();
             } else {
                 display.value += value;
             }
